@@ -23,5 +23,35 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    color: var(--dark-color);
+    background-color: var(--grey-color);
+
 }
 
+.wrapper{
+    background-color: var(--light-color);
+    padding: 1.5rem 4rem 3rem 4rem;
+    width: 600px;
+    height: 680px;
+    border-top-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    position: relative;
+}
+
+.quiz-title{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.quiz-score{
+    text-align: right;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 5px solid var(--grey-color);
+    font-weight: bold;
+    width: 100px;
+    height: 50px;
+    margin: .5rem auto;
+    color: var(--light-purple-color);
+}
