@@ -89,4 +89,6 @@ body {
     background-color: var(--light-purple-color);
     color: var(--light-color);
     box-shadow: 0 4px 0 0 #6c4298;
+    transition: var(--transition);
 }
+
