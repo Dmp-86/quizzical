@@ -129,3 +129,16 @@ body {
     transition: var(--transition);
     box-shadow: 0 4px 0 0 #bbb;
 }
+
+.quiz-foot button:hover{
+    background-color: #e6e6e6;
+    box-shadow: 0 4px 0 0 #a7a7a7;
+}
+
+.quiz-foot button:active{
+    transform: scale(0.95);
+}
+
+#play-again{
+    display: none;
+}
