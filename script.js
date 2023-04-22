@@ -78,6 +78,9 @@ function checkAnswer(){
             _result.innerHTML = `<p> <i class = "fas fa-times"></i> Incorrect Answer! </p> <p> <small><b>Correct Answer: </b> ${correctAnswer}</small></p>`;
         }
         checkCount();
+    } else {
+        _result.innerHTML = `<p><i class ="fas fa-question"></i>Please select an option </p>`;
+        _checkBtn.disabled = false;
     }
 }
 
@@ -91,7 +94,9 @@ function checkCount(){
     askedCount++;
     setCount();
     if(askedCount == totalQuestion){
-        alert("hello");
+        _result.innerHTML += `<p> Your score is ${correctScore} </p>`;
+        _playAgainBtn.style.display = "block";
+        _checkBtn.style.display = "none";
     } else {
         setTimeout(() => {
             loadQuestion();
