@@ -30,11 +30,13 @@ async function loadQuestion(){
     const result = await fetch(`${APIUrl}`);
     const data = await result.json();
     // console.log(data.results[0]);
+    _result.innerHTML = "";
     showQuestion(data.results[0]);
 }
 
 // display question and options
 function showQuestion(data){
+    _checkBtn.disabled = false;
     correctAnswer = data.correct_answer;
     let incorrectAnswer = data.incorrect_answers;
     let optionsList = incorrectAnswer;
@@ -69,11 +71,35 @@ function checkAnswer(){
     _checkBtn.disabled = true;
     if(_options.querySelector('.selected')){
         let selectedAnswer = _options.querySelector('.selected span').textContent;
-        if(selectedAnswer === correctAnswer){
+        if(selectedAnswer.trim() == HTMLDecode(correctAnswer)){
             correctScore++;
-            _result.innerHTML = `<p> <i class = "fas fa-check"></i>Correct Answer! </p>`;
+            _result.innerHTML = `<p> <i class = "fas fa-check"></i> Correct Answer! </p>`;
         } else {
-            _result.innerHTML = `<p> <i class = "fas fa-times"></i>Incorrect Answer! <small><b>Correct Answer: </b> ${correctAnswer}</small></p>`;
+            _result.innerHTML = `<p> <i class = "fas fa-times"></i> Incorrect Answer! </p> <p> <small><b>Correct Answer: </b> ${correctAnswer}</small></p>`;
         }
+        checkCount();
     }
+}
+
+// to convert html entities into normal text of correct answer if there is any
+function HTMLDecode(textString) {
+    let doc = new DOMParser().parseFromString(textString, "text/html");
+    return doc.documentElement.textContent;
+}
+
+function checkCount(){
+    askedCount++;
+    setCount();
+    if(askedCount == totalQuestion){
+        alert("hello");
+    } else {
+        setTimeout(() => {
+            loadQuestion();
+        }, 300);
+    }
+}
+
+function setCount(){
+    _totalQuestion.textContent = totalQuestion;
+    _correctScore.textContent = correctScore;
 }
