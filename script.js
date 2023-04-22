@@ -5,7 +5,8 @@ const _options = document.querySelector('.quiz-options');
 const _correctScore = document.getElementById('correct-score');
 const _totalQuestion = document.getElementById('total-question');
 const _checkBtn = document.getElementById('check-answer');
-const _playAgainBtn = document.getElementById('play-again')
+const _playAgainBtn = document.getElementById('play-again');
+const _result = document.getElementById('result');
 
 let correctAnswer = "", correctScore = askedCount = 0, totalQuestion = 10;
 
@@ -67,7 +68,7 @@ function selectOption(){
 function checkAnswer(){
     _checkBtn.disabled = true;
     if(_options.querySelector('.selected')){
-        let selectedAnswer = options.querySelector('.selected span').textContent;
+        let selectedAnswer = _options.querySelector('.selected span').textContent;
         if(selectedAnswer === correctAnswer){
             correctScore++;
             _result.innerHTML = `<p> <i class = "fas fa-check"></i>Correct Answer! </p>`;
