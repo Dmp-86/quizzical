@@ -10,29 +10,28 @@ const _result = document.getElementById('result');
 
 let correctAnswer = "", correctScore = askedCount = 0, totalQuestion = 10;
 
+// load questions from quiz API
+async function loadQuestion(){
+    const APIUrl ='https://opentdb.com/api.php?amount=10&type=multiple' ;
+    const result = await fetch(`${APIUrl}`);
+    const data = await result.json();
+    _result.innerHTML = "";
+    showQuestion(data.results[0]);
+}
+
 // event listeners
 function eventListeners(){
     _checkBtn.addEventListener('click', checkAnswer);
-
+    _playAgainBtn.addEventListener('click', restartQuiz);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function(){
     loadQuestion();
     eventListeners();
     _totalQuestion.textContent = totalQuestion;
     _correctScore.textContent = correctScore;
 });
 
-
-
-async function loadQuestion(){
-    const APIUrl ='https://opentdb.com/api.php?amount=10&type=multiple' ;
-    const result = await fetch(`${APIUrl}`);
-    const data = await result.json();
-    // console.log(data.results[0]);
-    _result.innerHTML = "";
-    showQuestion(data.results[0]);
-}
 
 // display question and options
 function showQuestion(data){
@@ -42,20 +41,19 @@ function showQuestion(data){
     let optionsList = incorrectAnswer;
     optionsList.splice(Math.floor(Math.random() * (incorrectAnswer.length +1)), 0, correctAnswer); 
 
-    _question.innerHTML = `${data.question} <br> <span class = "category">${data.category} </span>`;
+    _question.innerHTML = `${data.question} <br> <span class = "category"> ${data.category} </span>`;
     _options.innerHTML = `
     ${optionsList.map((option, index) => `
         <li> ${index + 1}. <span> ${option} </span> </li>
         `).join('')}
     `;
-
     selectOption();
 }
 
 // option selection
 function selectOption(){
-    _options.querySelectorAll('li').forEach((option) => {
-        option.addEventListener('click', () => {
+    _options.querySelectorAll('li').forEach(function(option){
+        option.addEventListener('click', function(){
             if(_options.querySelector('.selected')){
                 const activeOption = _options.querySelector('.selected');
                 activeOption.classList.remove('selected');
@@ -94,11 +92,15 @@ function checkCount(){
     askedCount++;
     setCount();
     if(askedCount == totalQuestion){
+        setTimeout(function(){
+            console.log("");
+        }, 5000);
+
         _result.innerHTML += `<p> Your score is ${correctScore} </p>`;
         _playAgainBtn.style.display = "block";
         _checkBtn.style.display = "none";
     } else {
-        setTimeout(() => {
+        setTimeout(function(){
             loadQuestion();
         }, 300);
     }
@@ -107,4 +109,13 @@ function checkCount(){
 function setCount(){
     _totalQuestion.textContent = totalQuestion;
     _correctScore.textContent = correctScore;
+}
+
+function restartQuiz(){
+    correctScore = askedCount = 0;
+    _playAgainBtn.style.display = "none";
+    _checkBtn.style.display = "block";
+    _checkBtn.disabled = false;
+    setCount();
+    loadQuestion();
 }
