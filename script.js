@@ -18,7 +18,12 @@ function showQuestion(data){
     let optionsList = incorrectAnswer;
     optionsList.splice(Math.floor(Math.random() * (incorrectAnswer.length +1)), 0, correctAnswer); 
 
-    _question.innerHTML = `${data.question} <br> <span class = "category">${data.category} </span>`
+    _question.innerHTML = `${data.question} <br> <span class = "category">${data.category} </span>`;
+    _options.innerHTML = `
+    ${optionsList.map((option, index) => `
+        <li> ${index + 1}. <span> ${option} </span> </li>
+        `).join('')}
+    `;
 }
 
 loadQuestion();
