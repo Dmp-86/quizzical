@@ -219,7 +219,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(149, 36, 241);
+    background-color: var(--light-purple-color);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease;
@@ -234,10 +234,10 @@ h2 {
   /* Adding a border with rounded corners and padding around the modal content */
 #modal-content {
     width: 80%;
-    border: var(--red) 5px solid;
+    border: var(--dark-color) 4px solid;
     border-radius: 1.5rem;
-    padding: 2rem;
-    color: var(--off-white);
+    padding: 1rem;
+    color: var(--grey-color);
     text-align: center;
   }
   
