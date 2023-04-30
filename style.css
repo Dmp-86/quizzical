@@ -21,15 +21,29 @@
     justify-content: center;
 }
 
+/* backround image added to body, with a backup of a background color in case of issues loading image */
 body {
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     color: var(--dark-color);
-    /* background-color: var(--grey-color); */
+    background-color: var(--grey-color);
     background: url(images/bwQuiz.jpg) center center;
     background-repeat: no-repeat
-
 }
+
+h2 {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
 
 .wrapper{
     background-color: var(--light-color);
@@ -158,13 +172,11 @@ body {
     font-weight: 500;
     text-align: center;
     padding: 0.75rem;
-    background-color: var(--dark-color);
+    background-color: var(--light-purple-color);
     border-radius: 2rem;
     color: var(--off-white);
     margin: 0.3rem;
     box-shadow: -2px -2px 5px var(--off-white) inset;
-    
-
 }
 
 .btn:hover {
@@ -197,6 +209,43 @@ body {
     color: var(--light-color);
 }
 
+/* modal container styling */
+#modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(149, 36, 241);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+  }
+
+/* Changed the modal opacity to be visable */
+#modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Adding a border with rounded corners and padding around the modal content */
+#modal-content {
+    width: 80%;
+    border: var(--red) 5px solid;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    color: var(--off-white);
+    text-align: center;
+  }
+  
+  /* adding margin to top of close modal button */
+
+  #close-modal {
+    margin-top: 3rem;
+  }  
 
 /* media query */
 @media(max-width: 678px){
