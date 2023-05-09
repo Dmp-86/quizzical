@@ -15,36 +15,34 @@
     <link href="images/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="flex">
+    <a href="index.html">
+        <h1 class="quiz-title">Quizical</h1>
+    </a>
     <div class="wrapper">
-        <div class="quiz-head">
-            <h1 class="quiz-title">Quizical</h1>
-        </div>
-        <div class="quiz-container">
+                <div class="quiz-container">
                 <h2>Welcome to Quizical!</h2>
                 <p> Your personal quiz master.</p>
                 <p> Navigate through the quiz using the buttons below. You can easily return to the home page by clicking the Quizical logo at the top of the page</p>
             
-
-            <div class="quiz-foot-btns">
                 <button id="open-modal" class="btn">How to Play</button>
                     <a href="game.html" class="btn">Play</a>
                     <a href="highscores.html" id="highscore-btn" class="btn">High Scores <i class="fa-solid fa-crown"></i></a>
             </div>
         </div>
     </div>
-    <div id="modal-container" class="show">
-        <div id="modal-content">
+    <div id="modal-container">
+        <div id="modal-content" class="show">
           <h2>How To Play</h2>
           <p>Press Play button</p>
-          <p>Select your preferred level of difficulty</p>
+          <!-- <p>Select your preferred level of difficulty</p> -->
           <p>Answer questions by selecting the correct answer</p>
           <p>Save your high score, & play again - can you beat your last high score?</p>
           <button id="close-modal" class="btn">Close</button>
         </div>
-      </div>
-
+   <script src="javascript.js"></script>
+   <script src="tempCodeRunnerFile.js"></script>
 
    <script src="script.js"></script> 
-   <script src="javascript.js"></script>
+   
 </body>
 </html>
