@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@1,900&family=Poppins&display=swap');
 
 * {
     padding: 0;
@@ -9,7 +8,7 @@
 
 :root{
 /* Typography */
-    --header-text: 'Caveat', sans-serif;
+    --header-text: 'Fira Sans Extra Condensed', sans-serif;
     --content-text: 'Poppins', sans-serif;
 
 /* Colors */
@@ -46,10 +45,14 @@ h2 {
     padding-bottom: 1rem;
   }
   
-  p {
+p {
     text-align: center;
     font-size: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+
+a {
+    text-decoration: none;
   }
 
 .wrapper{
@@ -57,15 +60,14 @@ h2 {
     padding: 1.5rem 4rem 3rem 4rem;
     width: 600px;
     height: 680px;
-    border-top-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
+    border-radius: 30px;
     position: relative;
 }
 
-.quiz-title{
+/* .quiz-title{
     text-align: center;
     font-size: 2rem;
-}
+} */
 
 .quiz-score{
     text-align: right;
@@ -135,19 +137,14 @@ h2 {
 }
 
 .quiz-foot-btns {
-    border: none;
+    border-color: var(--light-purple-color);
     border-radius: 0.5rem;
     outline: 0;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
     padding: .5rem 1rem;
     margin: 0 auto;
-    text-transform: uppercase;
-    cursor: pointer;
     display: block;
     background-color: var(--grey-color);
-    color: var(--light-color);
+    color: var(--dark-color);
     letter-spacing: 2px;
     transition: var(--transition);
     box-shadow: 0 4px 0 0 #bbb;
@@ -155,14 +152,17 @@ h2 {
 
 .quiz-foot-btns {
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     justify-content: space-around;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
-.quiz-foot-btns button:hover{
-    background-color: #e6e6e6;
-    box-shadow: 0 4px 0 0 #a7a7a7;
-}
+/* .quiz-foot-btns:hover{
+    background-color: #6f87ee;
+    box-shadow: 0 4px 0 0 #049b04;
+    border-color: var(--light-purple-color);
+} */
 
 .quiz-foot-btns button:active{
     transform: scale(0.95);
@@ -187,9 +187,9 @@ h2 {
 }
 
 .btn:hover {
-    background-color: var(--off-white);
-    color: var(--black);
-    box-shadow: -2px -2px 5px var(--black) inset;
+    background-color: #6f87ee;
+    box-shadow: 0 4px 0 0 #049b04;
+    border-color: var(--light-purple-color);
 }
 
 .btn[disabled]:hover {

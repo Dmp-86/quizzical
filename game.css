@@ -4,17 +4,18 @@ body {
 
 h1{
     font-family: var(--header-text);
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 4rem;
+    font-weight: 900;
     padding-top: .5rem;
     font-style: italic;
-    color: var(--light-color);
+    color: var(--dark-color);
     text-align: center;
-    text-shadow: 10px 10px 10px var(--light-blue-color);
-
+    text-shadow: 10px 10px 10px #cb3ee5;
+    /* background-color: var(--grey-color); */
+    text-decoration: none;
 }
 
-.choice-container {
+/* .choice-container {
     display: flex;
     margin-bottom: 0.8rem;
     width: 100%;
@@ -39,7 +40,7 @@ h1{
 .choice-text {
     padding: 2rem;
     width: 100%;
-}
+} */
 
 .correct {
     background: linear-gradient(32deg, rgba(11,223,36) 0%, rgb(41,232,111) 100%);
