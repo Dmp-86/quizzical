@@ -2,6 +2,18 @@ body {
     color: rgb(7, 1, 1);
 }
 
+h1{
+    font-family: var(--header-text);
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: .5rem;
+    font-style: italic;
+    color: var(--light-color);
+    text-align: center;
+    text-shadow: 10px 10px 10px var(--light-blue-color);
+
+}
+
 .choice-container {
     display: flex;
     margin-bottom: 0.8rem;
