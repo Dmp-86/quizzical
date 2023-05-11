@@ -8,7 +8,7 @@ h1{
     font-weight: 900;
     padding-top: .5rem;
     font-style: italic;
-    color: var(--dark-color);
+    color: var(--light-color);
     text-align: center;
     text-shadow: 10px 10px 10px #cb3ee5;
     /* background-color: var(--grey-color); */
