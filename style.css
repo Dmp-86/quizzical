@@ -78,6 +78,7 @@ a {
 .quiz-container{
     border-color: #6c4298;
     border-style: inset;
+    padding: 20px;
 }
 
 .quiz-score{

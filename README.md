@@ -46,100 +46,35 @@ I used [coolors.co](https://coolors.co/6c4298-8f52d1-1ba7c0-ffffff-f2f2f2-000000
 - **Features on all pages-**
 - Add features appearing on all (linked title & favicon)
 - **Home Page**
+- The home page consists of a background image depicting a school chalkboard, with various themes written on the board. It holds a container, consisting of a welcome message and some basic instructions for use. Below the information, we have three buttons each with their own function. 
+How to play: When clicked, this button will open a modal with game instructions. The modal covers the entire page, andf includes a close button. When the close button is clicked, the modal will disappear to reveal the landing page again. 
+Play: When clicked, this will initiate the first round of the quiz. The quiz area contains a clickable title which will return the user to the landing page. It also hosts a container, resppnsible for holding the quiz question, a progress counter, a category section for each question and the four answer buttons. Below this, we have a 'Check Answer' button.
+Highscores: This page holds a 'Leaderboard' list for highscores. 
 
-- Featured on all pages, the fully responsive navigation bar includes links to the Logo, Home page, Gallery and Contact page. It is identical on each page to allow for easy navigation and consistentency in design aesthetics.
-This section will enable the user to easily navigate from page to page across all devices without having to revert back to the previous page via the browser ‘back’ button.
-The navigation bar converts to a hamburger icon with a dropdown menu on screen-sizes of 750px and below. The menu is accessed by pressing the hamburger icon. This allows the content to fit in a structured manner on smaller devices. 
+- **The Game Page**
+- For ease of navigation, the title acts as a clickable link to return the user to the landing page at any time. The quiz calls an API to generate the questions, in rounds of 10. When the question is displayed, the user can select one of four possible answers. Clicking the 'Check Answer' button will compare the users selection with the data from the API and display confirmation of either correct or incorrect answer. As well as a text prompt for the result, a background color has been used for further aesthetic feedback. For correct answers, the user will see green background. For incorrect, the user will see red background. 
+The question counter will display how many answers have been provided until that point in time. Once the user has answered 10 questions, the round will be complete and their score will be displayed. Highscores?
 
-![screenshot](documentation/nav-main.png)
-![screenshot](documentation/nav-hamburger.png)
-![screenshot](documentation/nav-hamburger-mobile.png)
-
-- **The Hero Image & Hero Cover**
-
-- The hero section includes an image to display the main site content and some cover text to briefly describe the subject matter found on the site. The main hero image uses a high resolution image of a cannabis plant under full spectrum light. The colors of the image serve as a break to the standard green palette used across the site. This is intended to capture attention and provide visual indication of the subject matter. 
-The section uses an animation zoom feature to highlight the image for users. Included on top of the image, is a cover box with the name of the site and a brief description of the intended audience. 
-
-![screenshot](documentation/hero-img-cover.png)
-
-- **Plant History Section**
-
-    - This section introduces the user to a brief history of the cannabis plant. The intention is to provide some background information on historical medicinal use of cannabis in the UK, followed by prohibition and eventually legalization for medical patients. 
-The section includes an image relating to the content, as a means to break the blocks of information into more digestable pieces.
-
-![screenshot](documentation/plant-history.png)
-
-- **Patient Journey section**
-
-    - This section has been broken up into three sub-sections. All three sub-sections are styled with an image to make the text blocks more digestible. 
-The 'where do I start?' section describes the legislative status of cannabis in the UK for those seeking a prescription. It describes the criteria used by consultants to establish eligibility for a prescription. This aims to provide the user with an accurate starting point on their journey to acquire medical cannabis. 
-The 'how do I prepare?' section describes the access to medical records required for the assessment, and documentation required for the initial consultation. Also included is a blockquote in a contrasting color, detailing the important info needed about Summary Care Record.
-The 'initial consultation' section details how the first assessment is structured. It advises users on the type of questions they will be asked at the assessment. The section also includes a blockquote in a contrasting color, for the main points covered in the first assessment.
-
-![screenshot](documentation/pj-start.png)
-![screenshot](documentation/pj-prepare.png)
-![screenshot](documentation/pj-consult.png)
-
-- **Treatable Conditions section**
-
-    - This section is broken into two unordered lists to separate content, and improve responsive design on smaller screen sizes. It lists an overview of conditions that can be treated with cannabis, and respective symptoms. 
-This provides users with a quick reference guide to conditions that are eligible for treatment with cannabis products in the UK.
-
-![screenshot](documentation/conditions-v.png)
-![screenshot](documentation/conditions.png)
-
-- **FAQs**
-
-    - This is part of the 'Treatable Conditions' section, and it lists some frequently asked questions that are relevant for new users of the plant. It aims to dispell myths around cannabis use, and provides the user with further background information on the patient journey. 
-
-![screenshot](documentation/faqs.png)
-
-- **Testimonials section**
-
-    - This section is broken into 4 quotes. The intention is to provide the user with real-life patient reviews for a range of different conditions and symptoms.
-    The section is responsive and the structure of the quotes will change based on the users screen-size. 
-
-![screenshot](documentation/testimonials-fs.png)
-![screenshot](documentation/testimonials-bl.png)
+- **Highscores**
 
 - **Footer**
 
     - The footer section includes links to the relevant social media sites for CannaMed. The links will open to a new tab to allow easy navigation for the user. This negates the use of the 'back' button in the browser to allow for a more seamless user experience. 
 The footer is valuable to the user as it encourages them to keep connected via social media. It also encourages the user to become part of the social media communities. Included on the footer is the name of the site, a brief description of the purpose of the site and the developer information. 
 
-![screenshot](documentation/footer.png)
-
-- **Gallery section**
-
-    - The gallery will provide the user with supporting images to see cannabis in a range of forms.
-This section is valuable to the user as they will be able to easily identify the types of products available for patients, and modes of administration. It also includes cannabis bud images, to showcase the diversity in strains. 
-The gallery is fully responsive, and will show various column counts based on screen-size.  
-
-![screenshot](documentation/gallery1.png)
-![screenshot](documentation/gallery2.png)
-![screenshot](documentation/gallery3.png)
-![screenshot](documentation/gallery4.png)
-
-- **Contact Us section**
-
-    - This page will allow the user to contact the group directly for various reasons. 
-The user can specify if they are in receipt of a Medical Cannabis Prescription, if they believe they are eligible or if they would like to discuss something else. 
-The user will be asked to submit their full name and email address. The form diverts the user to an alternative page once they submit the request. This negates the use of browsers 'back' button, as it automatically redirects after 10 seconds. 
-
-![screenshot](documentation/contact.png)
-![screenshot](documentation/divertpage.png)
-
 
 ### Future Features
 
 With additional time to spend on this project, I believe the below features would improve the overall user experience. 
 
-- Truncated text/read more
-    - Reduce blocks of text to improve readability of the page and improve the structure. 
-- Eligibility Checker 
-    - Introduce a survey for users to allow them to check their own eligibility, based on official criteria. 
-- Cost Simulator
-    - Introduce a calculator into the site where users can simulate how much a monthly prescription will cost them, based on their individual needs. 
+- Difficulty Levels
+    - Allow user to select different levels of difficulty such as easy, medium and hard. 
+- Progress Bar 
+    - Introduce a visual progress bar to correspond with the. question counter. 
+- Timer
+    - Introduce a countdown timer for each question, mutable by the user. 
+- Team build
+    - Allow storage of scores employing a backend dadabase, to allow teams to play against each other while keeping track of success. 
 
 ## Tools & Technologies Used
 
