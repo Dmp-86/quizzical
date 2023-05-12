@@ -201,10 +201,20 @@ a {
 
 /* results styling */
 #result{
-    padding: 0.7rem 0;
+    padding: 1rem;
     text-align: center;
     font-weight: 600;
     font-size: 1.3rem;
+    padding: 0.75rem;
+    background-color: var(--light-purple-color);
+    border-radius: 2rem;
+    color: var(--off-white);
+    margin: 0.3rem;
+    box-shadow: -2px -2px 5px var(--off-white) inset;
+    justify-content: center;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 #result i{
