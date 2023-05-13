@@ -63,10 +63,6 @@ My first test produced some performance issues due to chrome extensions (see scr
 ## Bugs
 
 
-- Favicon error: 
-
-    - To fix this, I created a faviconand added it to my hmtl pages.
-
 [Add A Favicon to A Website in HTML](https://www.youtube.com/watch?app=desktop&v=kEf1xSwX5D8)
 
 
