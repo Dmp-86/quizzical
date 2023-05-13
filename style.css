@@ -156,12 +156,6 @@ a {
     font-weight: bold;
   }
 
-/* .quiz-foot-btns:hover{
-    background-color: #6f87ee;
-    box-shadow: 0 4px 0 0 #049b04;
-    border-color: var(--light-purple-color);
-} */
-
 .quiz-foot-btns button:active{
     transform: scale(0.95);
 }
@@ -203,7 +197,6 @@ a {
 #result{
     padding: 1r5m;
     text-align: center;
-    /* font-weight: 600; */
     font-size: 1.3rem;
     /* padding: 0.75rem; */
     background-color: var(--off-white);
@@ -212,8 +205,7 @@ a {
     margin: 3.3rem;
     box-shadow: -2p30px2px 5px var(--off-white) inset;
     justify-content: center;
-    display: inlin2pxck;
-    text-transform:2pxrcase;
+    margin: 0 auto;case;
     font-weight: bold;
 }
 da--dark-color
