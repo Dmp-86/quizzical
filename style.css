@@ -32,7 +32,7 @@ body {
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     color: var(--dark-color);
-    background-color: var(--grey-color);
+    background-color: var(--dark-color);
     background: url(images/bwquiz.jpg) center center;
     background-repeat: no-repeat;
 }
@@ -200,13 +200,13 @@ a {
 }
 
 #result {
-    width: 60px;
-    height: 30px;
+    width: 400px;
+    height: 60px;
     border-radius: 30px;
-    line-height: 30px;
-    margin: 0 auto;
-    background-color: var(--light-color);
+    line-height: 60px;
+    margin: 1px;
     color: var(--dark-color);
+    justify-content: center;
 }
 
 /* modal container styling */
