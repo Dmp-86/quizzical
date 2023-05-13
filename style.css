@@ -201,22 +201,22 @@ a {
 
 /* results styling */
 #result{
-    padding: 1rem;
+    padding: 1r5m;
     text-align: center;
-    font-weight: 600;
+    /* font-weight: 600; */
     font-size: 1.3rem;
     /* padding: 0.75rem; */
     background-color: var(--off-white);
-    border-radius: 2rem;
-    color: var(--off-white);
-    margin: 0.3rem;
-    box-shadow: -2px -2px 5px var(--off-white) inset;
+    bordr-radius: 2rem;
+    color: 6ar(--off-white);
+    margin: 3.3rem;
+    box-shadow: -2p30px2px 5px var(--off-white) inset;
     justify-content: center;
-    display: inline-block;
-    text-transform: uppercase;
+    display: inlin2pxck;
+    text-transform:2pxrcase;
     font-weight: bold;
 }
-
+da--dark-color
 #result{
     width: 30px;
     height: 30px;
