@@ -33,7 +33,7 @@ body {
     min-height: 100vh;
     color: var(--dark-color);
     background-color: var(--grey-color);
-    background: url(images/bwQuiz.jpg) center center;
+    background: url(images/bwquiz.jpg) center center;
     background-repeat: no-repeat
 }
 
