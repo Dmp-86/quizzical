@@ -32,17 +32,16 @@ I have tested the live deployed site on the following browsers to check for comp
 - [Chrome](https://www.google.com/chrome)
 - [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
 - [Edge](https://www.microsoft.com/edge)
-- [Safari](https://support.apple.com/downloads/safari)
 
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
 | Browser | Screenshot | Notes |
 | --- | --- | --- |
-| Chrome | ![screenshot](documentation/chrome-browser-test.png) | Works as expected |
-| Firefox | ![screenshot](documentation/firefox-dev.png) | Works as expected  |
-| Edge | ![screenshot](documentation/edge-browser-test.png) | Works as expected |
-| Safari | ![screenshot](documentation/safari-broswer2.png) | Minor CSS differences |
+| Chrome | ![screenshot](images/chrome.png) | Works as expected |
+| Firefox | ![screenshot](images/firefoxdev.png) | Minor CSS issues in result section  |
+| Edge | ![screenshot](images/edge.png) | Works as expected |
+
 
 
 
@@ -63,9 +62,7 @@ My first test produced some performance issues due to chrome extensions (see scr
 ## Bugs
 
 
-[Add A Favicon to A Website in HTML](https://www.youtube.com/watch?app=desktop&v=kEf1xSwX5D8)
-
 
 ## Unfixed Bugs
 
-There are no remaining bugs that I am aware of.
+Styling issues in results section in a firefox Dev browser
