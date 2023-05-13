@@ -15,15 +15,12 @@ h1{
     text-decoration: none;
 }
 
-
 .correct{
     background: linear-gradient(32deg, rgba(11,223,36) 0%, rgb(41,232,111) 100%);
     border-radius: 30px;
-    color: black;
 }
 
 .incorrect {
     background: linear-gradient(32deg, rgba(230, 21, 6) 0%, rgb(255, 0, 0) 100%);
     border-radius: 30px;
-    color: black;
 }

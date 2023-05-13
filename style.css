@@ -194,20 +194,295 @@ a {
 
 /* results styling */
 #result {
-    padding: 1r5m;
+    padding: 0.5rem;
     text-align: center;
+    font-size: 1.3rem;
+}
+
+#result {
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* modal container styling */
+#modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-purple-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+/* Changed the modal opacity to be visable */
+#modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Adding a border with rounded corners and padding around the modal content */
+#modal-content {
+    width: 80%;
+    border: var(--dark-color) 4px solid;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    color: var(--grey-color);
+    text-align: center;
+}
+
+/* adding margin to top of close modal button */
+#close-modal {
+    margin-top: 3rem;
+}
+
+/* media query */
+@media(max-width: 678px) {
+    .quiz-title {
+        font-size: 1.6rem;
+    }
+
+    .wrapper {
+        margin: 3rem 0;
+        width: 90%;
+        padding: 1.5rem 1rem 3rem 1rem;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .quiz-foot button {
+        font-size: 1rem;
+
+    }
+}@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@1,900&family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+:root{
+/* Typography */
+    --header-text: 'Fira Sans Extra Condensed', sans-serif;
+    --content-text: 'Poppins', sans-serif;
+
+/* Colors */
+    --light-purple-color: #8f52d1;
+    --light-color: #fff;
+    --dark-color: #000;
+    --grey-color: #f2f2f2;
+    --light-blue-color: #1ba7c0;
+    --transition: all 300ms ease-in-out;
+}
+
+/* centering */
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* backround image added to body, with a backup of a background color in case of issues loading image */
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    color: var(--dark-color);
+    background-color: var(--grey-color);
+    background: url(images/bwQuiz.jpg) center center;
+    background-repeat: no-repeat
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 900;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--light-color);
+    background: linear-gradient(32deg, rgb(24, 14, 160) 0%, rgb(187, 41, 232) 100%);
+    border-radius: 2rem;
+}
+
+h2 {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+p {
+    text-align: center;
+    font-size: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+a {
+    text-decoration: none;
+  }
+
+.wrapper{
+    background-color: #aad3e5;
+    padding: 1.5rem 4rem 3rem 4rem;
+    width: 600px;
+    height: 680px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.quiz-container{
+    border-color: #6c4298;
+    border-style: inset;
+    padding: 20px;
+}
+
+.quiz-score{
+    text-align: right;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 5px solid var(--grey-color);
+    font-weight: bold;
+    width: 100px;
+    height: 50px;
+    margin: .5rem auto;
+    color: var(--light-purple-color);
+}
+
+.quiz-question{
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+
+.quiz-question .category{
+    font-size: .9rem;
+    font-weight: 500;
+    background-color: var(--light-purple-color);
+    color: var(--light-color);
+    padding: .2rem .4rem;
+    border-radius: .2rem;
+    margin-top: .5rem;
+    display: inline-block;
+}
+
+.quiz-options{
+    list-style-type: none;
+    margin: 1rem;
+}
+
+.quiz-options li{
+    border-radius: .5rem;
+    font-weight: 600;
+    margin: .7rem 0;
+    padding: .4rem 1.2rem;
+    cursor: pointer;
+    border: 3px solid var(--light-purple-color);
+    background-color: var(--light-purple-color);
+    color: var(--light-color);
+    box-shadow: 0 4px 0 0 #6c4298;
+    transition: var(--transition);
+}
+
+.quiz-options li:hover{
+    background-color: var(--grey-color);
+    color: var(--dark-color);
+    border-color: var(--grey-color);
+    box-shadow: 0 4px 0 0 #bbb;
+}
+
+.quiz-options li:active{
+    transform: scale(0.97);
+}
+
+/* selected button styling */
+.selected{
+    background-color: var(--grey-color)!important;
+    color: var(--dark-color)!important;
+    border-color: var(--grey-color)!important;
+    box-shadow: 0 4px 0 0 #bbb!important;
+}
+
+.quiz-foot-btns {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+/* .quiz-foot-btns:hover{
+    background-color: #6f87ee;
+    box-shadow: 0 4px 0 0 #049b04;
+    border-color: var(--light-purple-color);
+} */
+
+.quiz-foot-btns button:active{
+    transform: scale(0.95);
+}
+
+#play-again{
+    display: none;
+}
+
+/* button styling */
+.btn{
+    font-family: var(--content-text);
+    font-size: 0.75rem;
+    /* font-weight: 500; */
+    text-align: center;
+    padding: 0.75rem;
+    background-color: var(--light-purple-color);
+    border-radius: 2rem;
+    color: var(--off-white);
+    margin: 0.3rem;
+    box-shadow: -2px -2px 5px var(--off-white) inset;
+    justify-content: center;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #c89af3;
+    box-shadow: 0 4px 0 0 #8a4fb9;
+    border-color: var(--light-purple-color);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+}
+
+
+/* results styling */
+#result{
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
     font-size: 1.3rem;
     /* padding: 0.75rem; */
     background-color: var(--off-white);
-    bordr-radius: 2rem;
-    color: 6ar(--off-white);
-    margin: 3.3rem;
-    box-shadow: -2p30px2px 5px var(--off-white) inset;
+    border-radius: 2rem;
+    color: var(--off-white);
+    margin: 0.3rem;
+    box-shadow: -2px -2px 5px var(--off-white) inset;
     justify-content: center;
-    margin: 0 auto;case;
+    display: inline-block;
+    text-transform: uppercase;
     font-weight: bold;
 }
-da--dark-color
+
 #result{
     width: 30px;
     height: 30px;
@@ -223,15 +498,15 @@ da--dark-color
 #modal-container {
     position: fixed;
     top: 0;
-  left: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-  background-color: var(--light-purple-color);
-  opacity: 0;
-  pointer-events: none;
+    background-color: var(--light-purple-color);
+    opacity: 0;
+    pointer-events: none;
     transition: opacity 0.5s ease;
   }
 
@@ -239,29 +514,28 @@ da--dark-color
 #modal-container.show {
     opacity: 1;
     pointer-events: auto;
-}
-
-/* Adding a border with rounded corners and padd#modal-content {
-  width: 80%;
+  }
+  
+  /* Adding a border with rounded corners and padding around the modal content */
+#modal-content {
+    width: 80%;
     border: var(--dark-color) 4px solid;
- order-radius: 1.5rem;
+    border-radius: 1.5rem;
     padding: 1rem;
     color: var(--grey-color);
     text-align: center;
-   }
-   
-  /* 
-adding margin to top of close modal button */
+  }
+  
+  /* adding margin to top of close modal button */
 
-   #close-modal {
+  #close-modal {
     margin-top: 3rem;
   }  
 
 /* media query */
-@medi
-a(max-width: 678px){
+@media(max-width: 678px){
     .quiz-title{
-         font-size: 1.6rem;
+        font-size: 1.6rem;
     }
     .wrapper{
         margin: 3rem 0;
